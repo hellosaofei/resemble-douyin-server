@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.5.2/vue.min.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <button @click="connect()">点击连接</button>
+      <button @click="send()">点击发送消息</button>
+    </div>
+  </body>
+  <script type="text/javascript">
+    const vm = new Vue({
+      el: "#root",
+      data() {
+        return {
+          wss: null,
+        };
+      },
+      mounted() {},
+      methods: {
+        connect() {
+          this.wss = new WebSocket("ws://localhost:3002");
+          this.wss.onopen = () => {
+            console.log("连接到了服务器");
+          };
+          this.wss.onclose = (msg) => {
+            console.log("与服务器断开了连接");
+          };
+          this.wss.onmessage = (msg) => {
+            console.log("接收到了数据", msg);
+          };
+        },
+        send() {
+          this.wss.send("123131");
+        },
+      },
+    });
+  </script>
+</html>

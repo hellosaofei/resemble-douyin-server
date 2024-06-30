@@ -52,14 +52,14 @@
 - 交易趋势
 
 ```js
-{
-  dataType:'PopularityTrend',
-  data:{
-    timeAxis:[],
-    transitionNumGoods:0,
-    transitionNumPeople:0,
-  }
-}
+const res = {
+  dataType: "transactionTrendData",
+  data: {
+    timeAxis: [],
+    transitionNumGoods: 0,
+    transitionNumPeople: 0,
+  },
+};
 ```
 
 #### PopularityTrendData
@@ -67,15 +67,15 @@
 - 人气趋势
 
 ```js
-{
-  dataType:'PopularityTrend',
-  data:{
-    timeAxis:[],
-    enterNum:[],
-    leaveNum:[],
-    aliveNum:[],
-  }
-}
+const res = {
+  dataType: "PopularityTrend",
+  data: {
+    timeAxis: [],
+    enterNum: [],
+    leaveNum: [],
+    aliveNum: [],
+  },
+};
 ```
 
 #### orderSourceData
@@ -83,18 +83,16 @@
 - 订单来源
 
 ```js
-{
-  dataType:'orderSourceData',
-  data:[
-
-  { value: 1048, name: "Search Engine" },
-  { value: 735, name: "Direct" },
-  { value: 580, name: "Email" },
-  { value: 484, name: "Union Ads" },
-  { value: 300, name: "Video Ads" },
-]
-
-}
+const res = {
+  dataType: "orderSourceData",
+  data: [
+    { value: 1048, name: "Search Engine" },
+    { value: 735, name: "Direct" },
+    { value: 580, name: "Email" },
+    { value: 484, name: "Union Ads" },
+    { value: 300, name: "Video Ads" },
+  ],
+};
 ```
 
 #### liveInfoData
@@ -122,22 +120,22 @@ const res = {
 - 数据面板
 
 ```js
-{
-  dataType:'dataPanelData',
-  data:{
-    summaryMoney:0,
-    transitionNumGoods:0,
-    transitionNumPeople:0,
-    conversionRate:0,
-    moneyOfThousandViews:0,
-    fansRate:0,
-    averageAliveNum:0,
-    totalViewNum:0,
-    incrementFans:0,
-    incrementFansOfGroup:0,
-    averageDuration:0
-  }
-}
+const res = {
+  dataType: "dataPanelData",
+  data: {
+    summaryMoney: 0,
+    transitionNumGoods: 0,
+    transitionNumPeople: 0,
+    conversionRate: 0,
+    moneyOfThousandViews: 0,
+    fansRate: 0,
+    averageAliveNum: 0,
+    totalViewNum: 0,
+    incrementFans: 0,
+    incrementFansOfGroup: 0,
+    averageDuration: 0,
+  },
+};
 ```
 
 #### productListData
