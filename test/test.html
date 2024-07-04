@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        dataType: "dataPanelData",
+        data: {
+          summaryMoney: 4350,
+          transitionNumGoods: 98,
+          transitionNumPeople: 82,
+          conversionRate: "6.98%",
+          moneyOfThousandViews: 723.43,
+          fansRate: "3.88%",
+          averageAliveNum: 10,
+          totalViewNum: 28192,
+          incrementFans: 121,
+          incrementFansOfGroup: 456,
+          averageDuration: "1分钟2秒",
+        },
+      };
+      Object.keys(obj.data).forEach((key) => {
+        if (toString.call(obj.data[key]) == "[object Number]") {
+          if (Math.random() < 0.4) {
+            console.log(111);
+            obj.data[key] += Math.random() * 100;
+          }
+        }
+      });
+      console.log(obj);
+    </script>
+  </body>
+</html>

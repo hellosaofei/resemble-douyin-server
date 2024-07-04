@@ -1,5 +1,5 @@
-import { generateRandomIntArray } from "../utils/index";
-const timeAxis = [
+import { generateRandomIntArray } from "../utils/index.js";
+export const timeAxis = [
   "11:15",
   "12:30",
   "13:45",
@@ -13,7 +13,7 @@ const timeAxis = [
   "23:45",
 ];
 export default {
-  dataType: "PopularityTrend",
+  dataType: "PopularityData",
   data: {
     timeAxis,
     enterNum: generateRandomIntArray(timeAxis.length),

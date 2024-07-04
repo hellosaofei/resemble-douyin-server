@@ -1,6 +1,7 @@
-export { default as orderSourceData } from "./orderSourceData";
-export { default as dataPanelData } from "./dataPanelData";
-export { default as liveInfoData } from "./liveInfoData";
-export { default as PopularityData } from "./PopularityData";
-export { default as productListData } from "./productListData";
-export { default as transactionTrendData } from "./transactionTrendData";
+export { default as orderSourceData } from "./orderSourceData.js";
+export { default as dataPanelData } from "./dataPanelData.js";
+export { default as liveInfoData } from "./liveInfoData.js";
+export { default as PopularityData } from "./PopularityTrendData.js";
+export { default as productListData } from "./productListData.js";
+export { default as transactionTrendData } from "./transactionTrendData.js";
+export { default as userPortraitData } from "./userPortraitData.js";

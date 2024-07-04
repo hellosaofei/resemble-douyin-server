@@ -31,11 +31,17 @@
             console.log("与服务器断开了连接");
           };
           this.wss.onmessage = (msg) => {
-            console.log("接收到了数据", msg);
+            console.log("接收到了数据", JSON.parse(msg.data));
           };
         },
         send() {
-          this.wss.send("123131");
+          this.wss.send(
+            JSON.stringify({
+              action: "getData",
+              dataType: "orderSourceData",
+              value: "",
+            })
+          );
         },
       },
     });
